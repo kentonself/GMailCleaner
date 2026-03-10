@@ -55,7 +55,6 @@ def main():
           if delete:
             print(f"deleting: {message['id']}, {message['snippet']}")
             results = service.users().threads().trash(userId= "me", id=message["id"]).execute()
-            sys.exit()
     
       except HttpError as error:
         # TODO(developer) - Handle errors from gmail API.
